@@ -26,17 +26,18 @@ int main()
 	vector<string> vectx; // Объявление вектора 
 	string buffx = ""; // Обьявление пустой строки, в которую будут заноситься координаты
 	cout << "Input amount of vectors: ";
-	getline(cin, buffx);
+	getline(cin, buffx); // Ввод желаемого количества векторов
 	vectx.push_back(buffx);
 	int n = stoi(vectx[0]); // Считывание цифры из строки и перевод ее в целочисленный тип данных
 	for (int i = 0; i < n; i++) // Цикл ввода координат векторов
 	{
-		cout << "Vector#" << i + 1 << endl;
+		cout << "Vector#" << i + 1 <<": " << endl;
 		cout << "	Input x: ";
 		getline(cin, buffx);
 		vectx.push_back(buffx);  // Добавление элемента в конец вектора
 		cout << "	Input y: ";
 		getline(cin, buffx);
+		cout << endl;
 		vectx.push_back(buffx);
 	}
 
