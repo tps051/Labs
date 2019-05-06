@@ -3,18 +3,18 @@
 #include <time.h>
 using namespace std;
 
-int * reverse_array(int * arr, int len);//инвертирование массива
-int * sort_vosr(int * arr, int len);//сортировка по возрастанию
-int * sort_ub(int * arr, int len);//сортировка по убыванию
+int * reverse_array(int * arr, int len);//РёРЅРІРµСЂС‚РёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР°
+int * sort_vosr(int * arr, int len);//СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ
+int * sort_ub(int * arr, int len);//СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СѓР±С‹РІР°РЅРёСЋ
 
-int* (*action(int*, int))(int* array, int len);//возвращает указатель на функцию в соответствии с резльтатом сравнения первого элемента и суммы элементов массива (без него)
+int* (*action(int*, int))(int* array, int len);//РІРѕР·РІСЂР°С‰Р°РµС‚ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° С„СѓРЅРєС†РёСЋ РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ СЂРµР·Р»СЊС‚Р°С‚РѕРј СЃСЂР°РІРЅРµРЅРёСЏ РїРµСЂРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° Рё СЃСѓРјРјС‹ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° (Р±РµР· РЅРµРіРѕ)
 
 int main(int argc, char const *argv[])
 {
 	srand(time(0));
 	int * (*func_arr)(int*, int);
 	int size;
-	cout << "Введите длину массива: ";
+	cout << "Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РјР°СЃСЃРёРІР°: ";
 	cin >> size;
 	int* array = new int[size];
 	for (int i = 0; i < size; i++) {
